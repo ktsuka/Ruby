@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>April</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div id="container">
+    <div id="content">
+      <% if flash.notice %>
+      <p class="notice"><%= flash.notice %></p>
+      <% end %>
+
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>
